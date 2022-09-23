@@ -113,8 +113,8 @@ def get_genes_from_Ensembl_pairwise(args,sourcedata,targetdata):
     
     inputtype = args.inputType
     
-    firstspecies = args.firstspecies
-    secondspecies = args.secondspecies
+    firstspecies = args.firstSpecies
+    secondspecies = args.secondSpecies
     if (firstspecies == None):
         print "Argument -s1 <firstspeciesname> is required"
     elif (secondspecies == None):
@@ -143,7 +143,7 @@ def get_genes_from_Ensembl_pairwise(args,sourcedata,targetdata):
             if (gene == None):
                 print "Argument -g <genename> is required"
             else:
-                print "Retreving Genes", name, "from species",  firstspecies, secondspecies
+                print "Retreving Genes", gene, "from species",  firstspecies, secondspecies
 
                 firstgene = get_gene_from_Ensembl_by_name(gene,firstgenome)
                 secondgene = get_gene_from_Ensembl_by_name(gene,secondgenome)
